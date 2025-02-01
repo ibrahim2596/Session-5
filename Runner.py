@@ -1,0 +1,20 @@
+from Library import Book
+from Library import Memeber
+from Library import StaffMember
+Book1 = Book("The Intelligent Investor" , "Benjamin Graham" , 9780063356726)
+Book2 = Book("The Power of Money" , "Paul Sheard" , 9798212879231)
+Member1 = Memeber("Ibrahim",25091996)
+Member2 = Memeber("Ahmed",16071999)
+StaffMember1 = StaffMember("Mohamed",30081993,3008)
+Book1.display_info()
+print(Book1.display_info)
+Book1.set_ISBN(1671999)
+Book1.display_info()
+print(Book1.display_info)
+Member1.member_info()
+print(Member1.member_info)
+Member1.borrow_book(Book1)
+Member2.borrow_book(Book1)
+Member1.return_book(Book2)
+new_book = StaffMember.add_book(StaffMember1,"The Wealth of Nations","Adam Smith",9780140436150)
+Member2.borrow_book(new_book)
